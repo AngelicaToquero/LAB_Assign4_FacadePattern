@@ -1,5 +1,16 @@
 public class Cart implements HotelService  {
-    public void requestCart(int numberOfCarts) {
-        System.out.println("Requesting + numberOfCarts + lugage carts ");
+    private int numberOfCarts;
+    
+    public Cart(int numberOfCarts) {
+        this.numberOfCarts = numberOfCarts;
+    }
+
+    public void requestCart() {
+        System.out.println("Requesting " + numberOfCarts +  " lugage carts ");
+    }
+
+    @Override
+    public void executeHotelService() {
+        requestCart();
     }
 }

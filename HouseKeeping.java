@@ -1,5 +1,15 @@
 public class HouseKeeping implements HotelService {
-    public void clearRoom (int roomNumber) {
-        System.out.println("Cleaning  + roomNumber + ");
+    private int roomNumber;
+
+    public HouseKeeping (int roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+    public void cleanRoom() {
+        System.out.println("Cleaning room: "  + roomNumber  );
+    }
+
+    @Override
+    public void executeHotelService() {
+        cleanRoom();
     }
 }
